@@ -1,0 +1,84 @@
+:root {
+  --primary-color: #7000ff;
+  --dark-bg: #0a0a0a;
+  --header-bg: rgba(15, 15, 15, 0.95);
+  --text-light: #e0e0e0;
+}
+body
+{
+    margin: 0;
+}
+
+.main-header {
+    position: fixed;
+
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.logo img {
+  width: 300px;
+  height: 100px;
+  margin: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links .active {
+  color: var(--primary-color);
+}
+
+.mobile-menu {
+  display: none;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
