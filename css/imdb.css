@@ -1,0 +1,133 @@
+.imdb-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: black;
+    gap: 4rem;
+    color: white;
+}
+
+.imdb-rating
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+    height: 50px;
+    align-items: center;
+}
+
+.rating-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.rating-stars
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+}
+
+
+.rating-stars img{
+    width: 30px;
+}
+
+.imdb-images-trailer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.imdb-poster {
+    cursor: pointer;
+}
+
+.imdb-poster img {
+    width: 270px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.imdb-poster img:hover {
+    transform: scale(1.05);
+}
+
+.imdb-trailer {
+    position: relative;
+    width: 700px;
+    cursor: pointer;
+}
+
+.imdb-trailer video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.imdb-trailer button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.imdb-trailer button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.imdb-extra {
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+.imdb-videos, .imdb-photos {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    width: 190px;
+    height: 185px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.imdb-videos:hover, .imdb-photos:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    .imdb-images-trailer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imdb-poster img, .imdb-trailer {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .imdb-extra {
+        flex-direction: column;
+        align-items: center;
+    }
+}

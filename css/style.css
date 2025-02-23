@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+}
+
+.movie-name-image
+{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 25px;
+}
+
+.movie-name-image img
+{
+    display: flex;
+    width:400px;
+}

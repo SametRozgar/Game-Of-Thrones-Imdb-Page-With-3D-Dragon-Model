@@ -1,0 +1,5 @@
+#dragonContainer {
+    width: 100%;
+    height: calc(70vh - 70px);
+    margin-top: 70px;
+}

@@ -6,6 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/dragon.css">
+    <link rel="stylesheet" href="/css/imdb.css">
+    <link rel="stylesheet" href="/css/caracters.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -29,7 +32,157 @@
         </div>
     </nav> 
  
+  
+      <!-- 3D Model -->
+       
+      <div id="dragonContainer" class="model-container"></div>
+
+ <!--movie name section-->
+ <div class="movie-name-image">
+    <img src="/src/images/movie-name-3.png" alt="">
+ </div>
+
+ <!--IMDb section-->
+
+
+ <div class="imdb-section">
+    <div class="imdb-rating">
+        <div class="rating-section">
+            <span>Orginal title:Game of Thrones</span>
+            <span>Tv Series 2011 - 18+ - 1h</span>
+        </div>
+        <div class="rating-stars">
+            <span> IMDb Rating :9.2/10</span>
+            <div class="stars">
+            <img src="/src/icons/gold-star-icon.png" alt="">
+            <img src="/src/icons/gold-star-icon.png" alt="">
+            <img src="/src/icons/gold-star-icon.png" alt="">
+            <img src="/src/icons/gold-star-icon.png" alt="">
+            <img src="/src/icons/silver-star-icon.png" alt="">
+        </div>
+        </div>
+    </div>
+    <div class="imdb-images-trailer">
+        <div class="imdb-poster" onclick="window.open('https://www.imdb.com', '_blank')">
+            <img src="src/images/movie-poster.jpg" alt="Movie Poster">
+        </div>
+        <div class="imdb-trailer">
+            <video id="trailer-video" poster="src/images/trailer-placeholder.jpg" muted>
+                <source src="src/video/trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="play-trailer">Play Trailer</button>
+        </div>
+        <div class="imdb-extra" onclick="window.open('https://www.imdb.com', '_blank')">
+            <div class="imdb-videos">99+ VIDEOS</div>
+            <div class="imdb-photos">99+ PHOTOS</div>
+        </div>
+    </div>
+    
+</div>
+
+
+ <!--Caracters section-->
+
+ <div class="caracters-section">
+    <div class="caracters-section-title">
+        <h2>Caracters</h2>
+    </div>
+    <div class="caracter-khalesi">
+        <div class="caracter-image">
+         <img src="/src/images/khalesi.png" alt="">
+        </div>
+        <div class="caracter-description">
+            <span>Real Name: Emilia Clarke</span>
+            <span>Nicknames: Khaleesi, Mother of Dragons, Stormborn, The Breaker of Chains</span>
+            <span>Description: Born during a storm on Dragonstone, Daenerys is the last surviving Targaryen princess (or so she believes). She was exiled to Essos as a child and was later married off to Khal Drogo to secure political alliances. Over time, she grows into a powerful leader, freeing slaves in the cities of Slaver’s Bay and forming a strong army known as the Unsullied. She is the mother of three dragons—Drogon, Rhaegal, and Viserion—who play a significant role in her quest to reclaim the Iron Throne. Her journey is one of transformation, from a timid girl to a fierce ruler with a vision of breaking the wheel of oppression in Westeros.</span>
+            
+        </div>
+    </div>
+
+    <div class="caracter-john-snow">
+        
+        <div class="caracter-description">
+            <span>Real Name: Kit Harington</span>
+            <span>Nicknames: King in the North, Lord Commander of the Night’s Watch, Aegon Targaryen, The White Wolf</span>
+            <span>Description: Raised as the illegitimate son of Eddard Stark, Jon Snow was always an outsider in Winterfell. Seeking purpose, he joins the Night’s Watch, where he proves himself as a natural leader. Over time, Jon discovers his true parentage—he is the son of Rhaegar Targaryen and Lyanna Stark, making him the rightful heir to the Iron Throne. He is known for his deep sense of honor, bravery in battle, and willingness to unite opposing factions, including the Wildlings and Night’s Watch, to fight against the White Walkers. His resurrection by Melisandre after being betrayed by his own men further cements his destiny as a pivotal figure in the fate of Westeros.</span>
+            
+        </div>
+
+        <div class="caracter-image">
+            <img src="/src/images/john_snow.png" alt="">
+           </div>
+    </div>
+
+    <div class="caracter-mountain">
+        <div class="caracter-image">
+         <img src="/src/images/mountain.png" alt="">
+        </div>
+        <div class="caracter-description">
+            <span>Real Name: Hafþór Júlíus Björnsson</span>
+            <span>Nicknames: The Mountain, Ser Gregor, Cersei’s Monster</span>
+            <span>Description: Gregor Clegane is one of the most feared warriors in Westeros, known for his immense size, brutal strength, and cruelty. He serves House Lannister as a ruthless enforcer, carrying out some of the most horrific acts in the series, including the rape and murder of Elia Martell and her children. After being fatally wounded by Oberyn Martell in a trial by combat, he is resurrected by Qyburn through dark and unnatural means, turning him into an almost mindless, zombie-like killing machine. Now serving as Cersei Lannister’s personal bodyguard, The Mountain is a silent yet terrifying presence, ready to crush anyone who threatens his queen.</span>
+            
+        </div>
+    </div>
+
+    <div class="caracter-hand">
+       
+        <div class="caracter-description">
+            <span>Real Name: Anton Lesser</span>
+            <span>Nicknames: The Hand of the Queen, The Mad Scientist</span>
+            <span>Description: A former maester stripped of his title due to his unethical experiments, Qyburn becomes one of Cersei Lannister’s closest advisors. He is intelligent, cunning, and willing to delve into forbidden sciences, including necromancy, to serve his queen. His most infamous creation is the zombified version of The Mountain, whom he resurrects to be Cersei’s personal bodyguard. Rising through the ranks, Qyburn eventually replaces Pycelle as the Hand of the Queen, playing a crucial role in Cersei’s rule and her schemes to maintain power.</span>
+            
+        </div>
+        <div class="caracter-image">
+            <img src="/src/images/hand.png" alt="">
+           </div>
+    </div>
+
+    <div class="caracter-tywin">
+        
+        <div class="caracter-description">
+            <span>Real Name: Charles Dance</span>
+            <span>Nicknames: The Lion of Lannister, Hand of the King</span>
+            <span>Description: Tywin Lannister is the ruthless and highly intelligent patriarch of House Lannister. He is a master strategist, serving as Hand of the King to multiple rulers, including King Aerys II, King Joffrey, and King Tommen. Tywin is known for his cold and calculated leadership, willing to do whatever it takes to maintain Lannister dominance. Despite being feared and respected, he has a complicated relationship with his children, especially Tyrion, whom he despises for being a dwarf and for allegedly causing his wife’s death during childbirth. His ultimate downfall comes at the hands of Tyrion, who kills him in one of the most shocking moments of the series.</span>
+            
+        </div>
+        <div class="caracter-image">
+            <img src="/src/images/tywin.png" alt="">
+           </div>
+    </div>
+
+    <div class="caracter-jaime">
+        <div class="caracter-image">
+         <img src="/src/images/jaime.png" alt="">
+        </div>
+        <div class="caracter-description">
+            <span>Real Name: Nikolaj Coster-Waldau</span>
+            <span>Nicknames: Kingslayer, The Lion of Lannister</span>
+            <span>Description: Jaime Lannister is one of the most skilled swordsmen in Westeros, known for his good looks, charm, and arrogance. He earned the infamous title “Kingslayer” after betraying and killing King Aerys II during Robert’s Rebellion, an act seen as dishonorable despite his noble intentions of preventing mass destruction. He shares an incestuous relationship with his twin sister, Cersei, and is deeply loyal to his family. Over the series, Jaime undergoes one of the most complex character arcs, transforming from a selfish, arrogant knight into a more self-aware and conflicted man, especially after losing his sword hand and forming an unexpected bond with Brienne of Tarth.</span>
+            
+        </div>
+    </div>
+
+    <div class="caracter-jofrey">
+        
+        <div class="caracter-description">
+            <span>Real Name: Jack Gleeson</span>
+            <span>Nicknames: The Young King, The Mad Prince</span>
+            <span>Description: Joffrey Baratheon is one of the most despised characters in the series, known for his cruelty, sadism, and unpredictable nature. Though he is officially the son of King Robert Baratheon, he is actually the product of Cersei and Jaime Lannister’s incestuous relationship. Raised as the heir to the throne, Joffrey becomes king after Robert’s death and quickly establishes himself as a tyrant. His actions include ordering the execution of Ned Stark, torturing Sansa Stark, and abusing his power to instill fear in those around him. His reign is cut short when he is poisoned at his own wedding, an event orchestrated by Lady Olenna Tyrell and Petyr Baelish.</span>
+            
+        </div>
+        <div class="caracter-image">
+            <img src="/src/images/jofrey.png" alt="">
+           </div>
+    </div>
+ </div>
+
+
+
  <script src="/js/header.js"></script>
+ <script src="js/dragon.js"></script>
+ <script src="js/imdb.js"></script>
  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

@@ -1,0 +1,114 @@
+
+.caracters-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.caracters-section-title h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f8f8f8;
+    margin-bottom: 30px;
+}
+
+
+.caracter-khalesi, .caracter-john-snow, .caracter-mountain, 
+.caracter-hand, .caracter-tywin, .caracter-jaime, .caracter-jofrey {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 90%;
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.caracter-john-snow, .caracter-hand, .caracter-jofrey {
+    flex-direction: row-reverse;
+    transform: translateX(100px);
+}
+
+.caracter-image img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+}
+
+.caracter-description {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.caracter-description span {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #bdbdbd;
+}
+
+.caracter-description span:first-child {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInSlideReverse {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.caracter-khalesi, .caracter-mountain, .caracter-tywin, .caracter-jaime {
+    animation: fadeInSlide 1s ease-out forwards;
+}
+
+.caracter-john-snow, .caracter-hand, .caracter-jofrey {
+    animation: fadeInSlideReverse 1s ease-out forwards;
+}
+
+
+@media (max-width: 768px) {
+    .caracter-khalesi, .caracter-john-snow, .caracter-mountain, .caracter-hand, 
+    .caracter-tywin, .caracter-jaime, .caracter-jofrey {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .caracter-image img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+}
