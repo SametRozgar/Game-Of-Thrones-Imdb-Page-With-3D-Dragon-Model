@@ -25,3 +25,29 @@ document.addEventListener("DOMContentLoaded",()=>
         })
     })
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    
+    const navLinks = document.querySelectorAll(".nav-links a, .footer-links a");
+  
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault(); 
+  
+       
+        const targetId = this.getAttribute("href").replace("#", "");
+  
+       
+        const targetElement = document.getElementById(targetId);
+  
+        if (targetElement) {
+          
+          window.scrollTo({
+            top: targetElement.offsetTop - 50,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+  });
+  
